@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>疫情信息</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>疫情信息实时大数据</h1>
+      <div class="showTime">当前时间：</div>
+    </header>
+    <section class="mainbox">
+      <div class="column">
+        <div class="panel bar">
+          <h2>
+            柱状图-就业行业
+            <a href="javascript:;">2019</a>
+            <a href="javacript:;"> 2020</a>
+          </h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel line">
+          <h2>折线图-人员变化</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie">
+          <h2>饼形图-年龄分布</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+
+      <div class="column">
+
+        <div class="no">
+
+          <div class="no-hd">
+            <ul>
+              <li style="color: #E9684C;" id="chinaTotal_nowConfirm"></li>
+              <li style="color: #7d3c98;" id="chinaTotal_nowSevere"></li>
+              <li style="color: #f1c40f;" id="chinaTotal_importedCase"></li>
+            </ul>
+          </div>
+
+          <div class="no-bd">
+            <ul>
+              <li>现有确诊|较昨日<a style="color: #E9684C;" id="chinaAdd_nowConfirm"></a></li>
+              <li>现有重症|较昨日<a style="color: #7d3c98;" id="chinaAdd_nowSevere"></a></li>
+              <li>境外输入|较昨日<a style="color: #f1c40f;" id="chinaAdd_importedCase"></a></li>
+            </ul>
+          </div>
+
+          <div class="no-hd">
+            <ul>
+              <li style="color: #943126" id="chinaTotal_confirm"></li>
+              <li style="color: #2ecc71;" id="chinaTotal_heal"></li>
+              <li style="color: #1d0601;" id="chinaTotal_dead"></li>
+            </ul>
+          </div>
+
+          <div class="no-bd">
+            <ul>
+              <li>累计确诊|较昨日<a style="color: #943126;" id="chinaAdd_confirm"></a></li>
+              <li>累计治愈|较昨日<a style="color: #2ecc71;" id="chinaAdd_heal"></a></li>
+              <li>累计死亡|较昨日<a style="color: #1d0601;" id="chinaAdd_dead"></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="map">
+          <h2>
+            <button id="nowConfirm" onclick="javascript:;">当前确诊</button>
+            <button id="confirm" onclick="javascript:;">累计确诊</button>
+          </h2>
+          <div class="chart"></div>
+          <div class="map1"></div>
+          <div class="map2"></div>
+          <div class="map3"></div>
+        </div>
+
+      </div>
+
+      <div class="column">
+        <div class="panel bar1">
+          <h2>境外输入省市TOP
+             <a href="javascript:;">当前确诊</a>
+            <a href="javascript:;">累计确诊</a>
+          </h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel line1">
+          <h2>折线图-播放量</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie1">
+          <h2>饼形图-地区分布</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+    </section>
+    <script src="js/time.js"></script>
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/china.js"></script>
+    <script src="js/myMap.js"></script>
+    <script src="js/number.js"></script>
+  </body>
+</html>
