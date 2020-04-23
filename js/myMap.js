@@ -17,12 +17,11 @@
         min: 0,
         max: 100000,
         left: '3%',
-        bottom:'6%',
+        bottom:'9%',
         showLabel: true,
         textStyle:{
           color:"white",
         },
-        text: ["高", "低"],
         pieces: [
             {
                 gte: 10000,

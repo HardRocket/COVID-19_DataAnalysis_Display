@@ -49,15 +49,6 @@ header .changeButton {
   background-color: #555555;
   border-radius: 0.1rem;
 }
-header .yuqingButton {
-  position: absolute;
-  top: 0.2rem;
-  left: 0.625rem;
-  font-size: 0.4rem;
-  color: white;
-  background-color: #555555;
-  border-radius: 0.1rem;
-}
 .mainbox {
   min-width: 1024px;
   max-width: 1920px;
@@ -133,13 +124,12 @@ header .yuqingButton {
   text-align: center;
   color: #fff;
   font-size: 0.25rem;
-  font-weight: 700;
-  text-align: left;
+  font-weight: 400;
 }
 .panel h2 a {
   margin: 0 0.1875rem;
-  color: #ffffff;
-  text-decoration: none;
+  color: #fff;
+  text-decoration: underline;
 }
 .panel .chart {
   height: 3.5rem;
