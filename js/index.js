@@ -64,7 +64,7 @@
     ],
     series: [
       {
-        name: "直接访问",
+        name: "现有确诊人数",
         type: "line",
         lineWidth: "50%",
         data: data['nowConfirm_Rate'],
