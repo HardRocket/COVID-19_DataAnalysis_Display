@@ -4,7 +4,6 @@ $.ajax({
     dataType: "json", //返回数据格式为json
     success: function(data) {//请求成功完成后要执行的方法
         //each循环 使用$.each方法遍历返回的数据date
-        console.log(data);
         //人数
 
         //现有确诊人数

@@ -248,7 +248,6 @@ $.getJSON('COVID-19_china_rateData.json', function (data) {
 (function() {
   // 基于准备好的dom，初始化echarts实例
   $.getJSON('COVID-19_china_regionImported.json',function (data) {
-    console.log(data)
       var myChart = echarts.init(document.querySelector(".bar1 .chart"));
       var option = {
         color: ["#2f89cf"],
