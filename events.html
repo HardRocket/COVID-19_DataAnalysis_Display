@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微热点事件舆情数据库</title>
+    <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+   <link rel="stylesheet" href="{% static 'js/echarts/echarts.min.js' %}">
+    <link rel="stylesheet" href="{% static 'js/echarts/china.js' %}">
+
+</head>
+
+<body>
+    <div class="header">
+        热点事件舆情数据库
+    </div>
+    <div class="main clearfix"></div>
+    <div class="main-middle">
+        <div class="border-container">
+            <div class="main-title">
+                近期事件排行
+            </div>
+            <table class="table table-kingdargen loading" >
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>事件</th>
+                        <th>话题</th>
+                        <th>时间</th>
+                        <th>影响力</th>
+                    </tr>
+                </thead>
+                <tbody id="table1">
+                {% get_event_list as events%}
+                        {% for event in events %}
+                    <tr id="{{event.id}}">
+                        <td>{{event.rank}}</td>
+                        <td title="{{event.name}}"><a href="{% url 'showchart:event' event.id %}" class="event">{{event.name}}</a></td>
+                        <td>{{event.topic}}</td>
+                        <td>{{event.create_time}}</td>
+                        <td>{{event.hot}}</td>
+                    </tr>
+                        {% endfor %}
+                </tbody>
+            </table>
+            <span class="top-left border-span"></span>
+            <span class="top-right border-span"></span>
+            <span class="bottom-left border-span"></span>
+            <span class="bottom-right border-span"></span>
+        </div>
+        <a href="javascript:;" class="a-access load_more">
+            <button class="button type1" onClick="toggle('table1')">
+                查看更多
+            </button>
+        </a>
+    </div>
+
+</body>
+<script type="text/javascript">
+var len=document.getElementById('table1').getElementsByTagName('tr').length;
+var min=3;
+var min1=3
+ while(len>3){
+    var tb=document.getElementById(min);
+    tb.style.display='none';
+    min=min+1;
+ }
+function toggle(id){
+var tb=document.getElementById(id);
+var count=3;
+ while(count){
+    var tb=document.getElementById(min1);
+    tb.style.display='';
+    if(min!=min1){
+    min1=min1+1;
+    }
+    count=count-1;
+ }
+ if(min!=min1){
+ count=count+1;
+ }
+}
+
+</script>
+
+
+
+
+</html>
