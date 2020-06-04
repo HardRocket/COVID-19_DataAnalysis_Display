@@ -229,8 +229,8 @@ $.getJSON('COVID-19_china_rateData.json', function (data) {
         label: { show: true },
         labelLine: { show: true },
         data: [
-          { value: 20, name: "有病例城市" },
-          { value: 318, name: "零病例城市" },
+          { value: 7, name: "有病例城市" },
+          { value: 331, name: "零病例城市" },
         ]
       }
     ]
@@ -242,7 +242,7 @@ $.getJSON('COVID-19_china_rateData.json', function (data) {
     myChart.resize();
   });
 })();
-// 学习进度柱状图模块
+
 
 //境外输入data展示
 (function() {
